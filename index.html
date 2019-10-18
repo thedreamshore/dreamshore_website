@@ -27,12 +27,32 @@
     <link rel="stylesheet" href="css/loading.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
+<script>
+
+    const bannerCount = 2;
+    let loadedBannerCount = 0;
+    // bodyDiv.style.display = "none";
+    // myLoadingDiv.style.display = "block";
+
+    function onloadMe() {
+    let bodyDiv = document.getElementById('myBodyDiv');
+    let myLoadingDiv = document.getElementById('myLoadingDiv');
+        loadedBannerCount++;
+        if (loadedBannerCount === bannerCount) {
+            bodyDiv.style.display = "block";
+            myLoadingDiv.style.display = "none";
+            console.log(loadedBannerCount)
+        }
+    }
+</script>
 
 <body>
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
+    <img hidden onload="onloadMe()" src="./img/banner/banner2.png">
+    <img hidden onload="onloadMe()" src="./img/banner/banner.png">
     <div id="myLoadingDiv" style="margin-top: 100px;">
         <!-- Google Chrome -->
         <div class="infinityChrome" style="margin: auto;">
@@ -129,8 +149,6 @@
             </div>
         </header>
         <!-- header-end -->
-        <img hidden onload="onloadMe()" src="./img/banner/banner2.png">
-        <img hidden onload="onloadMe()" src="./img/banner/banner.png">
         <!-- slider_area_start -->
         <div class="slider_area">
             <div class="slider_active owl-carousel">
@@ -609,35 +627,7 @@
             }
 
         });
-
-
-        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-
-        if (!isChrome) {
-            document.getElementsByClassName('infinityChrome')[0].style.display = "none";
-            document.getElementsByClassName('infinity')[0].style.display = "block";
-        }
-
-
-        const bannerCount = 2;
-        let loadedBannerCount = 0;
-        let bodyDiv = document.getElementById('myBodyDiv');
-        let myLoadingDiv = document.getElementById('myLoadingDiv');
-        bodyDiv.style.display = "none";
-        myLoadingDiv.style.display = "block";
-
-        function onloadMe() {
-            loadedBannerCount++;
-            if (loadedBannerCount === bannerCount) {
-                bodyDiv.style.display = "block";
-                myLoadingDiv.style.display = "none";
-                console.log(loadedBannerCount)
-            }
-        }
     </script>
-
-
-
 </body>
 
 </html>
