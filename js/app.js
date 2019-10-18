@@ -8,12 +8,10 @@
 
 // const bannerCount = 2;
 // let loadedBannerCount = 0;
-// let bodyDiv = document.getElementById('myBodyDiv');
-// let myLoadingDiv = document.getElementById('myLoadingDiv');
-// bodyDiv.style.display = "none";
-// myLoadingDiv.style.display = "block";
 
 // function onloadMe() {
+// let bodyDiv = document.getElementById('myBodyDiv');
+// let myLoadingDiv = document.getElementById('myLoadingDiv');
 //   loadedBannerCount++;
 //   if (loadedBannerCount === bannerCount) {
 //     bodyDiv.style.display = "block";
