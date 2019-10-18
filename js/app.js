@@ -22,8 +22,14 @@
 
 })(jQuery);
 // myJavaScript
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
-// console.log(document.getElementById('myLoadingDiv'))
+if(!isChrome) {
+    document.getElementsByClassName('infinityChrome')[0].style.display = "none";
+    document.getElementsByClassName('infinity')[0].style.display = "block";
+}
+
+// 
 const bannerCount = 2;
 let loadedBannerCount = 0;
 let bodyDiv = document.getElementById('myBodyDiv');
