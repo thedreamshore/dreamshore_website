@@ -44,21 +44,29 @@
         let bodyDiv = document.getElementById('myBodyDiv');
         let myLoadingDiv = document.getElementById('myLoadingDiv');
         loadedBannerCount++;
-        if (loadedBannerCount === bannerCount) {
+        // if (loadedBannerCount === bannerCount) {
+        //     bodyDiv.style.display = "block";
+        //     myLoadingDiv.style.display = "none";
+        //     console.log(loadedBannerCount)
+        // }
+    }
+    window.addEventListener('load',
+        function () {
+        let bodyDiv = document.getElementById('myBodyDiv');
+        let myLoadingDiv = document.getElementById('myLoadingDiv');
+            console.log('hello!');
             bodyDiv.style.display = "block";
             myLoadingDiv.style.display = "none";
-            console.log(loadedBannerCount)
-        }
-    }
+        }, false);
 </script>
 
 <body>
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-
+<!-- 
     <img hidden onload="onloadMe()" src="./img/banner/banner2.jpg">
-    <img hidden onload="onloadMe()" src="./img/banner/banner.jpg">
+    <img hidden onload="onloadMe()" src="./img/banner/banner.jpg"> -->
     <div id="myLoadingDiv" style="margin-top: 100px;">
         <!-- Google Chrome -->
         <div class="infinityChrome" style="margin: auto;">
